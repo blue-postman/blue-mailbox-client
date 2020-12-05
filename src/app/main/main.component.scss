@@ -53,3 +53,26 @@ button {
   transform: translateY(-11px) rotate(-225deg);
   transition-delay: 0.2s;
 }
+
+.layer{
+    top: 0; bottom: 0;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    text-align: center;
+    background-color: rgba(228, 228, 228, 0.85);
+    // background-color: #E4E4E4;
+    // opacity: 0.3;
+}
+
+p{
+    font-size: 35px;
+}
+
+.layer-item{
+    text-align: left; 
+    left: 50%; 
+    position: absolute; 
+    margin-top: 15%;
+}
