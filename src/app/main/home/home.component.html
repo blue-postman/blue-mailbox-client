@@ -1,0 +1,49 @@
+<!-- 간단 베너 영역 -->
+<div class="small-banner">
+    <p>
+        <span class="font-color">파란우체통</span>과 함께 따뜻한 마음을 나눠요 :) <br>
+        현재까지 나눈 카드 <span class="font-color">199,993</span>통!
+    </p>
+</div>
+
+<!-- 메인카드 이미지 영역 -->
+<div class="main-card">
+    <div class="image">
+        <div class="card"><img src="assets/img/card-ex-1.png"></div>
+        <!-- <div class="envelope"><img src="assets/img/envelope-ex.png"></div> -->
+    </div>
+</div>
+
+<!-- 인기있는 카드 영역 -->
+<div class="card-list">
+    <div class="padding">
+        <div style="display: inline-flex; width: 100%;">
+            <span class="card-title">인기있는 카드 💌</span>
+            <span class="card-arrow" (click)="link_to_card()"><br>더보기 > &nbsp;&nbsp;</span>
+        </div>
+        <div class="card-item">
+            <div class="item" *ngFor="let item of data_list" (click)="link_to_card_view(item)">
+                dd
+            </div>
+            &nbsp;
+        </div>
+    </div>
+</div>
+
+<!-- <br> -->
+
+<!-- 크리스마스 카드 영역  -->
+<div class="card-list">
+    <div class="padding">
+        <div style="display: inline-flex; width: 100%;">
+            <span class="card-title">크리스마스 카드 🎄</span>
+            <span class="card-arrow" (click)="link_to_card()"><br>더보기 > &nbsp;&nbsp;</span>
+        </div>
+        <div class="card-item">
+            <div class="item" *ngFor="let item of data_list">
+                dd
+            </div>
+            &nbsp;
+        </div>
+    </div>
+</div>
