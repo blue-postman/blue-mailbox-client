@@ -17,7 +17,10 @@
 <!-- 인기있는 카드 영역 -->
 <div class="card-list">
     <div class="padding">
-        <span class="card-title">인기있는 카드 💌</span>
+        <div style="display: inline-flex; width: 100%;">
+            <span class="card-title">인기있는 카드 💌</span>
+            <span class="card-arrow" (click)="link_to_card()"><br>더보기 > &nbsp;&nbsp;</span>
+        </div>
         <div class="card-item">
             <div class="item" *ngFor="let item of data_list">
                 dd
@@ -32,7 +35,10 @@
 <!-- 크리스마스 카드 영역  -->
 <div class="card-list">
     <div class="padding">
-        <span class="card-title">크리스마스 카드 🎄</span>
+        <div style="display: inline-flex; width: 100%;">
+            <span class="card-title">크리스마스 카드 🎄</span>
+            <span class="card-arrow" (click)="link_to_card()"><br>더보기 > &nbsp;&nbsp;</span>
+        </div>
         <div class="card-item">
             <div class="item" *ngFor="let item of data_list">
                 dd
