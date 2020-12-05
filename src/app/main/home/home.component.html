@@ -22,7 +22,7 @@
             <span class="card-arrow" (click)="link_to_card()"><br>더보기 > &nbsp;&nbsp;</span>
         </div>
         <div class="card-item">
-            <div class="item" *ngFor="let item of data_list">
+            <div class="item" *ngFor="let item of data_list" (click)="link_to_card_view(item)">
                 dd
             </div>
             &nbsp;
