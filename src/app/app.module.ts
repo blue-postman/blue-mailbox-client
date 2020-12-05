@@ -11,6 +11,7 @@ import { CardComponent } from './main/card/card.component';
 import { CardViewComponent } from './main/card-view/card-view.component';
 import { WriteCardComponent } from './main/write-card/write-card.component';
 import { MyInfoComponent } from './main/my-info/my-info.component';
+import { SendCardComponent } from './main/send-card/send-card.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MyInfoComponent } from './main/my-info/my-info.component';
     CardViewComponent,
     WriteCardComponent,
     MyInfoComponent,
+    SendCardComponent
   ],
   imports: [
     BrowserModule,

@@ -23,7 +23,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'main', // 웹에서 보여지는 컴포넌트 (상단, 햄버거바 기본)
+    path: '', // 웹에서 보여지는 컴포넌트 (상단, 햄버거바 기본)
     component: MainComponent,
     children: [
       { path: 'home', component: HomeComponent },
