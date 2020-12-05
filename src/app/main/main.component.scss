@@ -1,4 +1,55 @@
-.app{
-    height: 30vh;
-    background-color: antiquewhite;
+.app {
+  margin-top: 15px;
+  height: 13vh;
+  // background-color: antiquewhite;
+  text-align: center;
+}
+
+img {
+  width: 130px;
+  vertical-align: middle;
+}
+
+.hamburger {
+  vertical-align: middle;
+  display: inline-block
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+#menu {
+  position: absolute;
+  width: 50px;
+  right: 20px;
+  top: 20px
+}
+
+#menu>span {
+  display: block;
+  width: 100%;
+  height: 8px;
+  background: #BAC4DA;
+  margin: 4px 0;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+
+
+#menu>.on:nth-child(1) {
+  transform: translateY(15px) rotate(225deg);
+  transition-delay: 0.2s;
+}
+
+#menu>.on:nth-child(2) {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+#menu>.on:nth-child(3) {
+  transform: translateY(-11px) rotate(-225deg);
+  transition-delay: 0.2s;
 }
