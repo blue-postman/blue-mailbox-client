@@ -1,4 +1,23 @@
 <div class="app">
-
+    <img src="assets/img/logo-1.png" (click)="link_to_main()">
+    <div class="hamburger" (click)="layer_popup_open()">
+        <button type="button" name="button" id="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
 </div>
+
+<!--레이어 팝업 -->
+<div class="layer" *ngIf="opened">
+    <div class="layer-item">
+        <p (click)="layer_popup_close()"><b>X</b></p>
+        <ng-container *ngFor="let item of list">
+            <p (click)="link_to_page(item.link)">{{item.label}}</p>
+        </ng-container>
+    </div>  
+</div>
+
+
 <router-outlet></router-outlet>
