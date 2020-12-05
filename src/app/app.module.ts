@@ -3,12 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-<<<<<<< HEAD
-
-@NgModule({
-  declarations: [
-    AppComponent
-=======
 import { HomeComponent } from './main/home/home.component';
 import { PublicComponent } from './public/public.component';
 import { MailBoxComponent } from './public/mail-box/mail-box.component';
@@ -31,7 +25,6 @@ import { SendCardComponent } from './main/send-card/send-card.component';
     WriteCardComponent,
     MyInfoComponent,
     SendCardComponent
->>>>>>> 7cdbf619fc1796bf0228daf543cf6caae8caf61f
   ],
   imports: [
     BrowserModule,

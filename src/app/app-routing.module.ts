@@ -1,10 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-<<<<<<< HEAD
-
-
-const routes: Routes = [];
-=======
 import { CardViewComponent } from './main/card-view/card-view.component';
 import { CardComponent } from './main/card/card.component';
 import { HomeComponent } from './main/home/home.component';
@@ -44,7 +39,6 @@ const routes: Routes = [
   },
 
 ];
->>>>>>> 7cdbf619fc1796bf0228daf543cf6caae8caf61f
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
