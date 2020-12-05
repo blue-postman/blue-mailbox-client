@@ -1,0 +1,39 @@
+.small-banner{
+    // background-color: rgb(83, 175, 255);
+    height: 15vh;
+    text-align: center;
+}
+
+p{
+    font-size: 30px;
+    line-height: 190%;
+}
+
+.font-color{
+    font-weight: bold;
+    color: #3B599A;
+}
+
+.main-card{
+    height: 50vh;
+    background-color: aquamarine;
+    text-align: center;
+}
+
+.image{
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+.envelope{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card{
+    position: absoulute;
+    top: 0;
+    left: 0;
+}
