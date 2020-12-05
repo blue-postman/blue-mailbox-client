@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,9 +15,14 @@ export class HomeComponent implements OnInit {
     { item: 4, src: ''}
   ]
 
-  constructor() { }
+  constructor(
+    private router: Router, 
+  ) { }
 
   ngOnInit() {
   }
 
+  link_to_card(){
+    this.router.navigateByUrl(`/card`);
+  }
 }
