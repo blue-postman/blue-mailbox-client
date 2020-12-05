@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'blue-mailbox-client';
+  title = '💌 파란우체통 : 편지로 마음을 전해주세요!';
 }
