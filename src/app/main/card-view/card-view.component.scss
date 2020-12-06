@@ -1,48 +1,99 @@
 .card-part {
-    height: 100%;
-    width: 100%;
-    text-align: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
 
-.card-part-2{
-    width: 100%;
-    text-align: center;
-    height: 15vh;
+.card-part-2 {
+  width: 100%;
+  text-align: center;
+  height: 15vh;
 }
 
 .padding {
-    display: inline-block;
-    width: 50%;
-    padding: 10px;
-    text-align: center;
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
 }
 
-.card-bottom{
-    width: 50%;
-    height: 100%;
-    display: inline-flex;
+.card-bottom {
+  width: 50%;
+  height: 100%;
+  display: inline-flex;
 }
 
 .card-title {
-    font-weight: bold;
-    font-size: 23px;
-    flex: 1;
+  font-weight: bold;
+  font-size: 23px;
+  flex: 1;
 }
 
-.btn{
-    background-color: #BAC4DA;
-    border: none;
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 10px;
-    width: 100%;
-    position:absolute; bottom:0px; left: 0;
-    margin-bottom: 15px;
+.btn {
+  background-color: #BAC4DA;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  margin-bottom: 15px;
 }
 
 
 p {
-    font-size: 20px;
-    line-height: 190%;
-  }
-  
+  font-size: 20px;
+  line-height: 190%;
+}
+
+.signup-popup {
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(99, 99, 99, 0.9);
+}
+
+.popup {
+  display: flex;
+  width: 50%;
+  height: 55%;
+  background-color: rgba(228, 228, 228);
+  vertical-align: middle;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+
+.popup-p {
+  font-size: 28px;
+  line-height: 190%;
+  margin-bottom: 10px;
+}
+
+.kakao-btn {
+  width: 100%;
+  border: none;
+  background-color: #f1d03c;
+  height: 38px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+}

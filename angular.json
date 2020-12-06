@@ -122,8 +122,13 @@
               "devServerTarget": "blue-mailbox-client:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "blue-mailbox-client"
 }
