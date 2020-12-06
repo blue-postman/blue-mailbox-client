@@ -18,17 +18,16 @@ p {
 }
 
 .padding {
-  margin-top: 30px;
+  margin-top: 8%;
   display: inline-block;
   width: 50%;
   text-align: left;
-  // background-color: bisque;
 }
 
 .card-main {
   width: 100%;
   text-align: center;
-  height: 50vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,3 +64,34 @@ p {
 .search-btn-flex {
   flex: 1;
 }
+
+.search-result{
+    height: 40vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-title{
+    font-size: 25px;
+}
+
+.card-item {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .item {
+    flex: auto;
+    width: 300px;
+    height: 250px;
+    background-color: rgb(187, 186, 186);
+    margin-right: 10px;
+    border-radius: 13px;
+    margin-bottom: 10px;
+  }
