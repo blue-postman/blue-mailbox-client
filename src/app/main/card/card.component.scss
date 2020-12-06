@@ -1,0 +1,67 @@
+p {
+  font-weight: bold;
+  font-size: 43px;
+  line-height: 180%;
+
+  span {
+    font-size: 27px;
+    font-weight: normal;
+  }
+
+  margin-bottom: -8px; // 기본적으로 p태그는 margin이 들어가있음 -> 빼줫음 ㅎㅎ
+}
+
+.search {
+  width: 100%;
+  height: 35vh;
+  text-align: center;
+}
+
+.padding {
+  margin-top: 30px;
+  display: inline-block;
+  width: 50%;
+  text-align: left;
+  // background-color: bisque;
+}
+
+.card-main {
+  width: 100%;
+  text-align: center;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  width: 97%;
+  height: 35px;
+  border-radius: 10px;
+  border: 1px solid #BAC4DA;
+  padding: 5px 5px;
+  font-size: 18px;
+}
+
+.search-btn {
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  border: none;
+  background-color: #BAC4DA;
+  padding: 5px 5px;
+}
+
+.search-part {
+  width: 100%;
+  display: inline-flex
+}
+
+.search-bar {
+  flex: 8;
+  text-align: left;
+}
+
+.search-btn-flex {
+  flex: 1;
+}
