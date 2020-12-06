@@ -27,7 +27,6 @@ export class HomeComponent implements OnInit {
   }
 
   link_to_card_view(item){
-    console.log(item)
     this.router.navigateByUrl(`/card-view`);
   }
 }
