@@ -18,8 +18,26 @@
                 </p>
             </div>
         </div>
-        <div style="flex: 1;  position:relative;">
-            <button class="btn">이 카드로 할래요!</button>
+        <div style="flex: 1; position:relative;">
+            <button class="btn" (click)="select_card()">이 카드로 할래요!</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- 회원가입 안했을 시에 나타나아ㅏ아아암 --> 
+<div class="signup-popup" *ngIf="opened">
+    <div class="popup">
+        <span class="close-btn" (click)="close_popup()">X</span>
+        <div style="width: 60%;">
+            <span class="popup-p">
+                잠깐 ! <br>
+                카드를 보내려면 회원가입이 필요해요 🙃 <br>
+    
+                1초만에 회원가입하기!
+            </span>
+    
+            <button class="kakao-btn" (click)="login_kakao()">카카오톡으로 가입하기</button>
         </div>
     </div>
 </div>
