@@ -1,17 +1,18 @@
 .notes {
     background-attachment: local;
     background-image:
-        linear-gradient(to right, white 10px, transparent 10px),
-        linear-gradient(to left, white 10px, transparent 10px),
-        repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
-    line-height: 31px;
+        linear-gradient(to right, white 20px, transparent 20px),
+        linear-gradient(to left, white 20px, transparent 20px),
+        repeating-linear-gradient(white, white 40px, #ccc 40px, #ccc 41px, white 41px);
+    line-height: 41px;
     padding: 12px 15px;
     resize: none;
     border: none;
     width: 100%;
     height: 500px;
     border-radius: 12px;
-    margin-top: 10px;
+    font-size: 19px;
+    text-align: center;
 }
 
 .main{
@@ -53,20 +54,10 @@
       border-radius: 5px;
   }
 
-  .header {
-    display: flex;
- }
- .logo,
- .search,
- .gnb {
-    flex: 0 0 auto; /* flex:none */
- }
- .gnb {
-    margin-left: auto;
- }
- .search {
-    display: flex;
- }
- input {
-    flex: 1;
- }
+  .select {
+    float: left; margin-top: 10px;
+  }
+
+  .color{
+    background-color: rgb(98, 116, 219); border-radius: 50%; height: 50px; width:50px; margin-right: -30px; margin-bottom: 5px;
+  }

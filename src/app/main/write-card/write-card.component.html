@@ -8,34 +8,14 @@
                 <img src="assets/img/card-ex-1.png" style="width: 100%;">
             </div>
             <div style="flex: 1.4;">
-                <div style="width: 100%; background-color: bisque;">
-                    <select style="float: left; margin-top: 10px;">
+                <div style="width: 100%;">
+                    <select class="select">
                         <option *ngFor="let item of font_list">{{item.name}}</option>
                     </select>
                     <div style="float: right;">
-                        <div style="background-color: rgb(98, 116, 219); border-radius: 50%; height: 50px; width:50px; margin-right: -30px;"></div>
+                        <div class="color"></div>
                     </div>
                 </div>
-                <!-- <div style=" display: inline-flex; width: 100%; justify-content: space-between; margin-bottom: 5px;">
-                    <div style="flex: 1;">
-                        <select>
-                            <option *ngFor="let item of font_list">{{item.name}}</option>
-                        </select>
-                    </div>
-                    <div style="flex: 1;margin-left: auto; background-color: antiquewhite; ">
-                        <div style="background-color: aqua; height: 30px; width: 10px; text-align: center;"></div>
-                    </div>
-                </div> -->
-
-                <!-- <select>
-                    <option *ngFor="let item of font_list">{{item.name}}</option>
-                </select>
-                <div style="background-color: rgb(98, 116, 219); border-radius: 50%; height: 50px; width:50px;"></div> -->
-                <!-- <div style="display: flex; width: 100%">
-                    <span style=" margin: 0 0 0 auto;">
-                        
-                    </span>
-                </div> -->
                 <textarea class="notes"></textarea>
                 <div style="width: 100%; text-align: right;">
                     <button class="btn">다 작성했어요!</button>
