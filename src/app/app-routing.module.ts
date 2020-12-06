@@ -13,16 +13,6 @@ import { PublicComponent } from './public/public.component';
 
 const routes: Routes = [
   {
-    path: 'public', // 웹에서 보여지는 화면이 아닌 컴포넌트들
-    component: PublicComponent,
-    children: [
-      {
-        path: 'mail-box', // 공유한 카드 보는 컴포넌트라 분리가 필요.
-        component: MailBoxComponent
-      },
-    ]
-  },
-  {
     path: '', pathMatch: 'full', redirectTo: 'home'
   },
   {
@@ -37,7 +27,16 @@ const routes: Routes = [
       { path: 'write-card', component: WriteCardComponent },
     ]
   },
-
+  {
+    path: '', // 웹에서 보여지는 화면이 아닌 컴포넌트들
+    component: PublicComponent,
+    children: [
+      {
+        path: 'mail-box', // 공유한 카드 보는 컴포넌트라 분리가 필요.
+        component: MailBoxComponent
+      },
+    ]
+  },
 ];
 
 @NgModule({
