@@ -12,7 +12,9 @@ import { CardViewComponent } from './main/card-view/card-view.component';
 import { WriteCardComponent } from './main/write-card/write-card.component';
 import { MyInfoComponent } from './main/my-info/my-info.component';
 import { SendCardComponent } from './main/send-card/send-card.component';
-
+import { GraphQLModule } from './graphql.module';
+import { DataService } from 'src/graphql/data-services';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,9 +30,13 @@ import { SendCardComponent } from './main/send-card/send-card.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GraphQLModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
