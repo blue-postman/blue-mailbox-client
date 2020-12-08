@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from 'src/graphql/data-services';
 
 @Component({
   selector: 'app-card',
@@ -25,9 +26,12 @@ export class CardComponent implements OnInit {
 
   constructor(
     private router: Router, 
+    public db: DataService,
   ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    const temp = await this.db.find_test();
+    console.log(temp)
   }
 
   search_card(){
