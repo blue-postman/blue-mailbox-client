@@ -14,8 +14,9 @@ import { MyInfoComponent } from './main/my-info/my-info.component';
 import { SendCardComponent } from './main/send-card/send-card.component';
 import { GraphQLModule } from './graphql.module';
 import { DataService } from 'src/graphql/data-services';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginCallbackComponent } from './public/login-callback/login-callback.component';
+import { TokenInterceptor } from './interceptors/token.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,8 +38,14 @@ import { LoginCallbackComponent } from './public/login-callback/login-callback.c
     HttpClientModule
   ],
   providers: [
-    DataService
+    DataService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
   ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
