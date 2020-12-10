@@ -15,6 +15,7 @@ import { SendCardComponent } from './main/send-card/send-card.component';
 import { GraphQLModule } from './graphql.module';
 import { DataService } from 'src/graphql/data-services';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginCallbackComponent } from './public/login-callback/login-callback.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     CardViewComponent,
     WriteCardComponent,
     MyInfoComponent,
-    SendCardComponent
+    SendCardComponent,
+    LoginCallbackComponent
   ],
   imports: [
     BrowserModule,

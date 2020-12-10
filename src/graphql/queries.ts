@@ -7,4 +7,10 @@ export const find_test = gql`
             test_name
         }
     }
-`
+`;
+
+export const login_social = gql`
+  mutation login_social($social_id: String!, $social_access_token: String!) {
+    login_social(social_id: $social_id, social_access_token: $social_access_token)
+  }
+`;
