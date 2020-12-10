@@ -7,6 +7,7 @@ import { MainComponent } from './main/main.component';
 import { MyInfoComponent } from './main/my-info/my-info.component';
 import { SendCardComponent } from './main/send-card/send-card.component';
 import { WriteCardComponent } from './main/write-card/write-card.component';
+import { LoginCallbackComponent } from './public/login-callback/login-callback.component';
 import { MailBoxComponent } from './public/mail-box/mail-box.component';
 import { PublicComponent } from './public/public.component';
 
@@ -34,6 +35,10 @@ const routes: Routes = [
       {
         path: 'mail-box', // 공유한 카드 보는 컴포넌트라 분리가 필요.
         component: MailBoxComponent
+      },      
+      {
+        path: 'login-callback/:token', // 공유한 카드 보는 컴포넌트라 분리가 필요.
+        component: LoginCallbackComponent
       },
     ]
   },
