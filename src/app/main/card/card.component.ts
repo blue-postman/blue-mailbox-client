@@ -30,7 +30,7 @@ export class CardComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
-    const temp = await this.db.find_test();
+    const temp = await this.db.my_info();
     console.log(temp)
   }
 

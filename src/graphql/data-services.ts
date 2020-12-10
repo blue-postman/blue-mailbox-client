@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Apollo, QueryRef } from 'apollo-angular';
-import { find_test, login_social } from './queries';
+import { find_test, login_social, my_info } from './queries';
 
 @Injectable({
     providedIn: 'root'
@@ -9,15 +9,15 @@ import { find_test, login_social } from './queries';
 export class DataService {
     constructor(private apollo: Apollo) { }
 
-    public async find_test() {
+    public async my_info() {
         try {
           const result: any = await this.apollo
             .query({
-              query: find_test,
+              query: my_info,
             })
             .toPromise();
     
-          return result.data.find_test;
+          return result.data.my_info;
         } catch (err) {
             alert(err)
         }

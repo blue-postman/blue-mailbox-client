@@ -40,8 +40,6 @@ export class CardViewComponent implements OnInit {
             url: '/v2/user/me',
             success: async (resultObj) => {
               // alert(resultObj);
-              console.log(access_token)
-              console.log(resultObj.properties)
               const result = await self.db.login_social(resultObj.id + '', access_token);
               self.router.navigateByUrl(`/login-callback/${result}`);
             },

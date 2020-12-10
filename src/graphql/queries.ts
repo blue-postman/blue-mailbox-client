@@ -14,3 +14,12 @@ export const login_social = gql`
     login_social(social_id: $social_id, social_access_token: $social_access_token)
   }
 `;
+
+export const my_info = gql`
+query{
+    my_info{
+      user_name
+    }
+  }
+`;
+
