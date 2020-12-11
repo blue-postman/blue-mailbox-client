@@ -43,4 +43,30 @@ query{
 }
 `;
 
+export const card_view_info = gql`
+query card_view_info($card_idx: Float!){
+  card_view_info(card_idx: $card_idx){
+    card_idx
+    card_title
+    card_describe
+    card_img_url
+  }
+}
+`;
+
+export const card_search = gql`
+query card_search($card_keyword: String!){
+  card_search(card_keyword: $card_keyword){
+    card_idx
+    card_title
+    card_describe
+    card_img_url
+    card_keyword
+  }
+}
+`;
+
+
+
+
 

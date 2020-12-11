@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from 'src/graphql/data-services';
 declare var Kakao;
 @Component({
@@ -9,23 +9,32 @@ declare var Kakao;
 })
 
 export class CardViewComponent implements OnInit {
-
-
   public opened: boolean = false
+  public card_idx;
+  public card_data;
 
   constructor(
     private router: Router, 
-    public db: DataService
+    public db: DataService,
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit() {
+    const params = this.route.snapshot.params;
+    this.card_idx = Number(params.card_idx)
+    this.load_data()
   }
 
-  select_card(){
+  async load_data(){
+    console.log(this.card_idx)
+    this.card_data = await this.db.card_view_info(this.card_idx);
+  }
+
+  select_card(card_idx){
     if(!this.check_token()){
       this.opened = true;
     }else{
-      this.router.navigateByUrl('write-card');
+      this.router.navigateByUrl(`/write-card/${card_idx}`);
     }
   }
 
