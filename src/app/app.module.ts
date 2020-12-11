@@ -18,6 +18,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginCallbackComponent } from './public/login-callback/login-callback.component';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { SignUpComponent } from './main/sign-up/sign-up.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { SignUpComponent } from './main/sign-up/sign-up.component';
     BrowserModule,
     AppRoutingModule,
     GraphQLModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     DataService,

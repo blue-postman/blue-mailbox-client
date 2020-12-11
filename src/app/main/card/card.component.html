@@ -10,7 +10,7 @@
             </p>
             <div class="search-part">
                 <div class="search-bar">
-                    <input type="text" class="search-input" placeholder="키워드를 입력해주세요!">
+                    <input type="text" class="search-input" placeholder="키워드를 입력해주세요!" [(ngModel)]="keyword">
                 </div>
                 <div class="search-btn-flex">
                     <button class="search-btn" (click)="search_card()">검색</button>
@@ -26,10 +26,10 @@
 <div class="search-result" *ngIf="show">
     <div class="search">
         <div class="padding">
-            <span class="result-title"><b>‘크리스마스’</b> 에 대한 결과</span>
+            <span class="result-title"><b>‘{{keyword}}’</b> 에 대한 결과</span>
 
             <div class="card-item">
-                <div class="item" *ngFor="let item of data_list" (click)="link_to_card_view(item)">
+                <div class="item" *ngFor="let item of data_list" (click)="link_to_card_view(item)" [style.backgroundImage]="'url('+ item.card_img_url +')'" >
                 </div>
                 &nbsp;
             </div>

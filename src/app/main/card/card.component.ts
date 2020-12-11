@@ -10,19 +10,9 @@ import { DataService } from 'src/graphql/data-services';
 export class CardComponent implements OnInit {
 
   public show: boolean = false;
-  public data_list = [
-    { item: 1, src: ''},
-    { item: 2, src: ''},
-    { item: 3, src: ''},
-    { item: 4, src: ''},
-    { item: 3, src: ''},
-    { item: 3, src: ''},
-    { item: 3, src: ''},
-    { item: 3, src: ''},
-    { item: 3, src: ''},
-    { item: 3, src: ''},
-    { item: 3, src: ''}
-  ]
+  public data_list = []
+
+  public keyword;
 
   constructor(
     private router: Router, 
@@ -34,8 +24,9 @@ export class CardComponent implements OnInit {
     // console.log(temp)
   }
 
-  search_card(){
+  async search_card(){
     this.show = true;
+    this.data_list = await this.db.card_search(this.keyword);
   }
 
   link_to_card_view(item){

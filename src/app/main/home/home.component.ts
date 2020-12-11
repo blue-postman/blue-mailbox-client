@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl(`/card`);
   }
 
-  link_to_card_view(item){
-    this.router.navigateByUrl(`/card-view`);
+  link_to_card_view(card_idx){
+    this.router.navigateByUrl(`/card-view/${card_idx}`);
   }
 }
