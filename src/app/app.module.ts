@@ -17,6 +17,7 @@ import { DataService } from 'src/graphql/data-services';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginCallbackComponent } from './public/login-callback/login-callback.component';
 import { TokenInterceptor } from './interceptors/token.interceptor';
+import { SignUpComponent } from './main/sign-up/sign-up.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
     WriteCardComponent,
     MyInfoComponent,
     SendCardComponent,
-    LoginCallbackComponent
+    LoginCallbackComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

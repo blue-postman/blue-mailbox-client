@@ -22,7 +22,11 @@ export class CardViewComponent implements OnInit {
   }
 
   select_card(){
-    this.opened = true;
+    if(!this.check_token()){
+      this.opened = true;
+    }else{
+      this.router.navigateByUrl('write-card');
+    }
   }
 
   close_popup(){
@@ -62,6 +66,15 @@ export class CardViewComponent implements OnInit {
     } catch (e) {
       console.log(e);
       alert(e);
+    }
+  }
+
+  check_token(){
+    const token = window.localStorage.getItem('token');
+    if(token){
+      return true;
+    }else{
+      return false;
     }
   }
 
