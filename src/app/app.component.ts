@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from 'src/graphql/data-services';
 
 
 declare var Kakao;
@@ -10,6 +11,10 @@ declare var Kakao;
 })
 export class AppComponent {
   title = '💌 파란우체통 : 편지로 마음을 전해주세요!';
+
+  constructor(
+    public db: DataService,
+  ) { }
 
   async ngOnInit() {
     // await this.app.user.fetch();

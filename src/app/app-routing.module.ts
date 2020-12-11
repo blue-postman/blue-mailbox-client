@@ -6,6 +6,7 @@ import { HomeComponent } from './main/home/home.component';
 import { MainComponent } from './main/main.component';
 import { MyInfoComponent } from './main/my-info/my-info.component';
 import { SendCardComponent } from './main/send-card/send-card.component';
+import { SignUpComponent } from './main/sign-up/sign-up.component';
 import { WriteCardComponent } from './main/write-card/write-card.component';
 import { LoginCallbackComponent } from './public/login-callback/login-callback.component';
 import { MailBoxComponent } from './public/mail-box/mail-box.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
       { path: 'my-info', component: MyInfoComponent },
       { path: 'send-card', component: SendCardComponent }, // 보낸카드 모아보는 컴포넌트
       { path: 'write-card', component: WriteCardComponent },
+      { path: 'sign-up', component: SignUpComponent },
     ]
   },
   {

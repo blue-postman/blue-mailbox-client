@@ -2,56 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from 'src/graphql/data-services';
 declare var Kakao;
+
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.scss']
 })
-export class MainComponent implements OnInit {
+export class SignUpComponent implements OnInit {
 
-  public list = [
-    // { label: '내 정보', link: 'my-info'},
-    { label: '보낸 편지', link: 'send-card'},
-    { label: '기능요청', link: 'ready'},
-    { label: 'About', link: 'about'},
-  ]
-
-  public my
-  public opened: boolean = false;
-  public sign_opened: boolean = false;
   constructor(
     private router: Router, 
     private db: DataService
   ) { }
 
-  async ngOnInit() {
-    const token = window.localStorage.getItem('token')
-    if(token){
-      this.my = await this.db.my_info();
-      console.log(this.my)
-    }
+  ngOnInit() {
   }
 
-
-  layer_popup_open(){
-    this.opened = true;
-  }
-
-
-  layer_popup_close(){
-    this.opened = false;
-    this.sign_opened = false;
-  }
-
-  link_to_main(){
-    this.router.navigateByUrl(`/`);
-  }
-
-  link_to_page(link){
-    this.layer_popup_close()
-    this.router.navigateByUrl(`/${link}`);
-  }
-  
 
   login_kakao(){
     // 
@@ -89,14 +55,4 @@ export class MainComponent implements OnInit {
     }
   }
 
-  signup(){
-    this.opened = false;
-    this.router.navigateByUrl(`/sign-up`);
-  }
-
-  logout(){
-    window.localStorage.removeItem('token');
-    this.opened = false;
-    this.ngOnInit()
-  }
 }

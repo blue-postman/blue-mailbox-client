@@ -13,15 +13,33 @@
 <div class="layer" *ngIf="opened">
     <div class="layer-item">
         <p (click)="layer_popup_close()"><b>X</b></p>
+        <p *ngIf="!my" (click)="signup()">회원가입</p>
+        <p *ngIf="my" (click)="link_to_page('my-info')">내 정보</p>
         <ng-container *ngFor="let item of list">
             <p (click)="link_to_page(item.link)">{{item.label}}</p>
         </ng-container>
+        <p *ngIf="my" (click)="logout()">로그아웃</p>
     </div>  
 </div>
 
 <br>
 <br>
 
+<div class="signup-popup" *ngIf="sign_opened">
+    <div class="popup">
+        <span class="close-btn" (click)="layer_popup_close()">X</span>
+        <div style="width: 60%;">
+            <span class="popup-p">
+                잠깐 ! <br>
+                카드를 보내려면 회원가입이 필요해요 🙃 <br>
+    
+                1초만에 회원가입하기!
+            </span>
+    
+            <button class="kakao-btn" (click)="login_kakao()">카카오톡으로 가입하기</button>
+        </div>
+    </div>
+</div>
 
 <router-outlet></router-outlet>
 
