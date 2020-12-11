@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DataService } from 'src/graphql/data-services';
 
 @Component({
   selector: 'app-write-card',
@@ -7,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WriteCardComponent implements OnInit {
 
+  public card_idx;
+  public card_data;
+  
   public font_list = [
     { name: '애플고딕' },
     { name: '산돌고딕' },
@@ -35,9 +40,19 @@ export class WriteCardComponent implements OnInit {
 
   public opened:boolean = false;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    public db: DataService,
+  ) { }
 
   ngOnInit() {
+    const params = this.route.snapshot.params;
+    this.card_idx = Number(params.card_idx);
+    this.load_data();
+  }
+
+  async load_data(){
+    this.card_data = await this.db.card_view_info(this.card_idx);
   }
 
   open_popup(){

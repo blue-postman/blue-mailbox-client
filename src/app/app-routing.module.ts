@@ -26,7 +26,7 @@ const routes: Routes = [
       { path: 'card-view/:card_idx', component: CardViewComponent },
       { path: 'my-info', component: MyInfoComponent },
       { path: 'send-card', component: SendCardComponent }, // 보낸카드 모아보는 컴포넌트
-      { path: 'write-card', component: WriteCardComponent },
+      { path: 'write-card/:card_idx', component: WriteCardComponent },
       { path: 'sign-up', component: SignUpComponent },
     ]
   },

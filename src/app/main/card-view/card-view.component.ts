@@ -30,11 +30,11 @@ export class CardViewComponent implements OnInit {
     this.card_data = await this.db.card_view_info(this.card_idx);
   }
 
-  select_card(){
+  select_card(card_idx){
     if(!this.check_token()){
       this.opened = true;
     }else{
-      this.router.navigateByUrl('write-card');
+      this.router.navigateByUrl(`/write-card/${card_idx}`);
     }
   }
 
