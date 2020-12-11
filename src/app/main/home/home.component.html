@@ -9,7 +9,7 @@
 <!-- 메인카드 이미지 영역 -->
 <div class="main-card">
     <div class="image">
-        <div class="card"><img src="assets/img/card-ex-1.png"></div>
+        <div class="card"><img [src]="main_img_url" style="width: 680px; border-radius: 10px;"></div>
         <!-- <div class="envelope"><img src="assets/img/envelope-ex.png"></div> -->
     </div>
 </div>
@@ -22,8 +22,9 @@
             <span class="card-arrow" (click)="link_to_card()"><br>더보기 > &nbsp;&nbsp;</span>
         </div>
         <div class="card-item">
-            <div class="item" *ngFor="let item of data_list" (click)="link_to_card_view(item)">
-                dd
+            <div class="item" *ngFor="let item of card_list_pop" (click)="link_to_card_view(item.card_idx)" [style.backgroundImage]="'url('+ item.card_img_url +')'">
+                <!-- <img [src]="item.card_img_url" style="width: 100%;">
+                <div [style.back]></div> -->
             </div>
             &nbsp;
         </div>
@@ -40,8 +41,7 @@
             <span class="card-arrow" (click)="link_to_card()"><br>더보기 > &nbsp;&nbsp;</span>
         </div>
         <div class="card-item">
-            <div class="item" *ngFor="let item of data_list" (click)="link_to_card_view(item)">
-                dd
+            <div class="item" *ngFor="let item of card_list_christmas" (click)="link_to_card_view(item.card_idx)" [style.backgroundImage]="'url('+ item.card_img_url +')'">
             </div>
             &nbsp;
         </div>

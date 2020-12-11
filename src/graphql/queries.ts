@@ -23,3 +23,24 @@ query{
   }
 `;
 
+export const select_main = gql`
+query{
+  select_main{
+		main_img{
+      card_idx
+      card_img_url
+    },
+    card_list_pop{
+      card_idx
+      card_img_url
+    }
+    card_list_christmas{
+      card_idx
+      card_img_url
+    }
+
+  }
+}
+`;
+
+
