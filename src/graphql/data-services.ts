@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Apollo, QueryRef } from 'apollo-angular';
-import { find_test, login_social, my_info } from './queries';
+import { find_test, login_social, my_info, select_main } from './queries';
 
 @Injectable({
     providedIn: 'root'
@@ -22,6 +22,20 @@ export class DataService {
             alert(err)
         }
     }
+
+    public async select_main() {
+      try {
+        const result: any = await this.apollo
+          .query({
+            query: select_main,
+          })
+          .toPromise();
+  
+        return result.data.select_main;
+      } catch (err) {
+          alert(err)
+      }
+  }
 
     public async login_social(social_id, social_access_token){
       try {
