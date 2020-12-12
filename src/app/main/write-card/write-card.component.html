@@ -1,13 +1,14 @@
-<!-- 카드를 씁시다! -->
- <div class="main">
+<div style="min-height: 100vh;">
+    <!-- 카드를 씁시다! -->
+ <div class="main" *ngIf="card_data">
     <div class="padding">
-        <div style="display: inline-flex; width: 100%; justify-content: center;
+        <div style="width: 100%; justify-content: center;
         align-items: center; height: 70vh;">
-            <div style="flex: 1; padding: 20px">
+            <div style="padding: 20px">
                 <span class="card-title">💌 {{card_data.card_title}}</span>
-                <img [src]="card_data.card_img_url" style="width: 100%;">
+                <img [src]="card_data.card_img_url" style="width: 100%; margin-top: 10px;">
             </div>
-            <div style="flex: 1.4;">
+            <div style="">
                 <div style="width: 100%;">
                     <select class="select">
                         <option *ngFor="let item of font_list">{{item.name}}</option>
@@ -43,3 +44,4 @@
 </div>
 
 <!-- 작성 끝 공유 팝업 !!!!!! -->
+</div>

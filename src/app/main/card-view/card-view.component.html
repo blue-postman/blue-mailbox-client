@@ -1,29 +1,34 @@
-<!-- 대빵 큰 카드이미지  -->
-<ng-container *ngIf="card_data">
-    <div class="card-part">
-        <div class="padding">
-            <img [src]="card_data.card_img_url" style="width: 100%; border-radius: 10px;">
+<div style="min-height: 100vh;">
+    <!-- 대빵 큰 카드이미지  -->
+    <ng-container *ngIf="card_data">
+        <div class="card-part">
+            <div class="padding">
+                <img [src]="card_data.card_img_url" style="width: 100%; border-radius: 10px;">
+            </div>
         </div>
-    </div>
-    <br>
-    <!-- 카드 설명과 버튼! -->
-    <div class="card-part-2">
-        <div class="card-bottom">
-            <div style="flex: 1; text-align: left;">
+        <br>
+        <!-- 카드 설명과 버튼! -->
+        <div class="card-part-2">
+            <div class="padding">
                 <span class="card-title">💌 {{card_data.card_title}} 카드</span>
-                <div style="width: 100%;">
-                    <p>
-                        {{card_data.card_describe}}
-                    </p>
-                </div>
-            </div>
-            <div style="flex: 1; position:relative;">
+                <p>
+                    {{card_data.card_describe}}
+                </p>
                 <button class="btn" (click)="select_card(card_data.card_idx)">이 카드로 할래요!</button>
+                <!-- <div style="flex: 1; text-align: left;">
+                    
+                    <div style="width: 100%;">
+
+                    </div>
+                </div> -->
+                <!-- <div style="flex: 1; position:relative;">
+                    
+                </div> -->
             </div>
         </div>
-    </div>
-    
-</ng-container>
+        
+    </ng-container>
+</div>
 
 <!-- 회원가입 안했을 시에 나타나아ㅏ아아암 --> 
 <div class="signup-popup" *ngIf="opened">

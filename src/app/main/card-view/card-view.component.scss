@@ -2,6 +2,7 @@
   height: 100%;
   width: 100%;
   text-align: center;
+  margin-top: 30px;
 }
 
 .card-part-2 {
@@ -12,7 +13,7 @@
 
 .padding {
   display: inline-block;
-  width: 50%;
+  width: 80%;
   padding: 10px;
   text-align: center;
 }
@@ -20,7 +21,7 @@
 .card-bottom {
   width: 50%;
   height: 100%;
-  display: inline-flex;
+  // display: inline-flex;
 }
 
 .card-title {
@@ -36,9 +37,9 @@
   font-size: 20px;
   border-radius: 10px;
   width: 100%;
-  position: absolute;
-  bottom: 0px;
-  left: 0;
+  // position: absolute;
+  // bottom: 0px;
+  // left: 0;
   margin-bottom: 15px;
 }
 

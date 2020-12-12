@@ -1,16 +1,29 @@
 <div class="app">
-    <img src="assets/img/logo-1.png" (click)="link_to_main()">
-    <div class="hamburger" (click)="layer_popup_open()">
+    <div class="dd" style="width: 40px">
+        <!-- <img src="assets/img/hamburger.png" style="width: 40px;" (click)="link_to_main()"> -->
+    </div>
+    <div class="dd">
+        <img src="assets/img/logo-1.png" style="margin-right: -10px;" (click)="link_to_main()">
+    </div>
+    <div class="dd">
+        <img src="assets/img/hamburger.png" style="width: 40px; margin-top: 15px; margin-right: 10px;" (click)="layer_popup_open()">
+    </div>
+    
+    <!-- <div class="hamburger" (click)="layer_popup_open()">
         <button type="button" name="button" id="menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
-    </div>
+    </div> -->
 </div>
 
+<!-- <div style="width: 100%; background-color: antiquewhite;">
+dd
+</div> -->
 <!--레이어 팝업 -->
 <div class="layer" *ngIf="opened">
+    <!-- dd -->
     <div class="layer-item">
         <p (click)="layer_popup_close()"><b>X</b></p>
         <p *ngIf="!my" (click)="signup()">회원가입</p>

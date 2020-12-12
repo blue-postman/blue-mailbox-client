@@ -25,11 +25,21 @@ export class CardComponent implements OnInit {
   }
 
   async search_card(){
+    this.keyword = JSON.parse(JSON.stringify(this.keyword))
     this.show = true;
     this.data_list = await this.db.card_search(this.keyword);
   }
 
-  link_to_card_view(item){
-    this.router.navigateByUrl(`/card-view`);
+  link_to_card_view(card_idx){
+    this.router.navigateByUrl(`/card-view/${card_idx}`);
   }
+
+  enterkey(e) {
+    console.log(e)
+    // if (window.event.keyCode == 13) {
+
+    //      // 엔터키가 눌렸을 때 실행할 내용
+    //      this.search_card();
+    // }
+}
 }
