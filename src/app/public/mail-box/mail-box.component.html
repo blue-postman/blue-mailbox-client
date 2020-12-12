@@ -1,8 +1,8 @@
-<div class="main">
+<div class="main" *ngIf="card_data">
     <div class="search">
         <div class="padding">
             <p>
-                <span style="font-weight: bold;">진이유</span>님이 보낸 <br>
+                <span style="font-weight: bold;">{{card_data.user_name}}</span>님이 보낸 <br>
                 따뜻한 편지 도착! 💌
             </p>
 
@@ -17,15 +17,15 @@
             </ng-container>
             <ng-container *ngIf="mailbox">
                 <div style="text-align: center; margin-bottom: 50%;" *ngIf="!card">
-                    <img [src]="main_img_url" style="width: 90%; border-radius: 10px; box-shadow:5px 5px 10px rgb(148, 148, 148);">
+                    <img [src]="card_data.card_img_url" style="width: 90%; border-radius: 10px; box-shadow:5px 5px 10px rgb(148, 148, 148);">
                     <br>
                     <span style="margin-top: 20px;">편지 읽어오는 중......</span>
                 </div>
             </ng-container>
             <ng-container *ngIf="card && mailbox">
                 <div style="text-align: center; margin-bottom: 10%;">
-                    <img [src]="main_img_url" style="margin-top: 30px; width: 90%; border-radius: 10px; box-shadow:5px 5px 10px rgb(148, 148, 148);">
-                    <textarea class="notes" [style.font-family]="'Bazzi'" readonly>{{letter}}</textarea>
+                    <img [src]="card_data.card_img_url" style="margin-top: 30px; width: 90%; border-radius: 10px; box-shadow:5px 5px 10px rgb(148, 148, 148);">
+                    <textarea class="notes" [style.font-family]="card_data.card_font" readonly>{{card_data.card_contents}}</textarea>
                     <div style="display: flex; width: 100%; text-align: center;">
                         <div style="flex: 1; ">
                             <span style="font-size: 30px;">💙</span> <br>

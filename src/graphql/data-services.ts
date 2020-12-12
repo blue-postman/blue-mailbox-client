@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Apollo, QueryRef } from 'apollo-angular';
-import { card_search, card_view_info, find_test, login_social, my_info, select_main } from './queries';
+import { card_search, card_view_info, find_test, login_social, my_info, select_main, select_write_card, write_to_card } from './queries';
 
 @Injectable({
     providedIn: 'root'
@@ -86,6 +86,37 @@ export class DataService {
     }
   }
 
+  public async write_to_card(data){
+    try {
+      const result: any = await this.apollo
+      .mutate({
+        mutation: write_to_card,
+        variables: {
+          data
+        }
+      })
+      .toPromise();
+    return result.data.write_to_card;
+    } catch (err) {
+        alert(err)
+    }
+  }
+
+  public async select_write_card(card_send_code: string){
+    try {
+      const result: any = await this.apollo
+      .query({
+        query: select_write_card,
+        variables: {
+          card_send_code
+        }
+      })
+      .toPromise();
+    return result.data.select_write_card;
+    } catch (err) {
+        alert(err)
+    }
+  }
   
   
 }

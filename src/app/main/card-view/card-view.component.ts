@@ -33,6 +33,7 @@ export class CardViewComponent implements OnInit {
   select_card(card_idx){
     if(!this.check_token()){
       this.opened = true;
+      window.localStorage.setItem('card_idx', card_idx)
     }else{
       this.router.navigateByUrl(`/write-card/${card_idx}`);
     }

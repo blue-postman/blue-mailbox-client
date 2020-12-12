@@ -13,6 +13,7 @@ export class WriteCardComponent implements OnInit {
   public card_data;
 
   public font;
+  public card_content = '';
   
   public font_list = [
     { name: '마루부리', value: "'MaruBuri-Regular'" },
@@ -53,6 +54,7 @@ export class WriteCardComponent implements OnInit {
 
   ngOnInit() {
     const params = this.route.snapshot.params;
+    this.font = this.font_list[0].value
     this.card_idx = Number(params.card_idx);
     this.load_data();
   }
@@ -80,5 +82,24 @@ export class WriteCardComponent implements OnInit {
         this.font = item.value
       }
     }
+  }
+
+
+  // 카드 다 작성했어요!
+  async write_card_complete(){
+
+    if(this.card_content == ''){
+      alert("내용을 작성해주세요!")
+      // this.notifyService.showSuccess("Data shown successfully !!", "ItSolutionStuff.com")
+    }
+    
+    const data = {
+      card_idx: Number(this.card_idx),
+      card_contents: this.card_content,
+      card_font: this.font
+    }
+
+    const code = await this.db.write_to_card(data)
+    console.log(code)
   }
 }

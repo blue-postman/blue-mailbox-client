@@ -19,6 +19,7 @@ import { LoginCallbackComponent } from './public/login-callback/login-callback.c
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { SignUpComponent } from './main/sign-up/sign-up.component';
 import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
