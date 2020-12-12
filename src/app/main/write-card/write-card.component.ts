@@ -11,13 +11,19 @@ export class WriteCardComponent implements OnInit {
 
   public card_idx;
   public card_data;
+
+  public font;
   
   public font_list = [
-    { name: '애플고딕' },
-    { name: '산돌고딕' },
-    { name: '귀찮딕' },
-    { name: '귀차나ㅓ' },
-    { name: 'ㅣ힝딕' }
+    { name: '마루부리', value: "'MaruBuri-Regular'" },
+    { name: '닉스곤폰트M', value: "'NIXGONM-Vb'" },
+    { name: '조선일보명조체', value: "'Chosunilbo_myungjo'" },
+    { name: '마포꽃섬', value: "'MapoFlowerIsland'" },
+    { name: '넥슨배찌체', value: "'Bazzi'" },
+    { name: '카페24 고운밤', value: "'Cafe24Oneprettynight'" },
+    { name: '빙그레체', value: "'Binggrae-Bold'" },
+    { name: '배민한나체', value: "'BMHANNAAir'" },
+    
   ]
 
   public color_list = [
@@ -65,5 +71,14 @@ export class WriteCardComponent implements OnInit {
 
   select_color(){
     this.close_popup()
+  }
+
+  select_font(val){
+    console.log(val)
+    for(let item of this.font_list){
+      if(val==item.name){
+        this.font = item.value
+      }
+    }
   }
 }
