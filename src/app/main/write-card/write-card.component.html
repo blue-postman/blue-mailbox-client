@@ -26,7 +26,7 @@
 
 
  <!-- 색상 선택 팝업 -->
- <div class="color-popup" *ngIf="opened">
+ <!-- <div class="color-popup" *ngIf="opened">
     <div class="popup">
         <span class="close-btn" (click)="close_popup()">X</span>
         <div class="color-item">
@@ -39,6 +39,25 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- 작성 끝 공유 팝업 !!!!!! -->
+<!-- </div> -->
+
+<!-- 회원가입 안했을 시에 나타나아ㅏ아아암 --> 
+<div class="signup-popup" *ngIf="opened">
+    <div class="popup">
+        <span class="close-btn" (click)="close_popup()">X</span>
+        <div style="width: 60%;">
+            <span class="popup-p">
+                <span style="font-size: 60px;">💌</span> <br>
+                소중한 편지가 <br> 작성되었어요! <br>
+                얼른 공유해주세요 :-) 
+            </span>
+            <br>
+            <br>
+            <input type="text" class="search-input" [(ngModel)]="url" readonly >
+            <!-- <button class="kakao-btn" (clickdfdfd)="login_kakao()">카카오톡으로 가입하기</button> -->
+        </div>
+    </div>
 </div>
+ 
