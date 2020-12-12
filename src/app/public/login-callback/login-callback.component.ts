@@ -18,7 +18,7 @@ export class LoginCallbackComponent implements OnInit {
     const login = window.localStorage.setItem('token', this.token);
 
     if(this.isLogin()){
-      this._router.navigateByUrl('write-card');
+      this._router.navigateByUrl('write-card/1');
     }
     
   }

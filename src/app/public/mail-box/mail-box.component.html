@@ -1,0 +1,52 @@
+<div class="main">
+    <div class="search">
+        <div class="padding">
+            <p>
+                <span style="font-weight: bold;">진이유</span>님이 보낸 <br>
+                따뜻한 편지 도착! 💌
+            </p>
+
+            <br>
+            <ng-container *ngIf="!mailbox">
+                <div style="text-align: center; margin-bottom: 50%;">
+                    <img src="assets/img/mailbox.GIF" style="width: 100%;" (click)="click_mailbox()">
+                <p style="text-align: center; font-size: 19px;">
+                    클릭하여 편지를 열어보세요!
+                </p>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="mailbox">
+                <div style="text-align: center; margin-bottom: 50%;" *ngIf="!card">
+                    <img [src]="main_img_url" style="width: 90%; border-radius: 10px; box-shadow:5px 5px 10px rgb(148, 148, 148);">
+                    <br>
+                    <span style="margin-top: 20px;">편지 읽어오는 중......</span>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="card && mailbox">
+                <div style="text-align: center; margin-bottom: 10%;">
+                    <img [src]="main_img_url" style="margin-top: 30px; width: 90%; border-radius: 10px; box-shadow:5px 5px 10px rgb(148, 148, 148);">
+                    <textarea class="notes" [style.font-family]="'Bazzi'" readonly>{{letter}}</textarea>
+                    <div style="display: flex; width: 100%; text-align: center;">
+                        <div style="flex: 1; ">
+                            <span style="font-size: 30px;">💙</span> <br>
+                            <span class="message">감동했어요!</span>
+                        </div>
+                        <div style="flex: 1; ">
+                            <span style="font-size: 30px;">💛</span> <br>
+                            <span class="message">고마워요!</span>
+                        </div>
+                        <div style="flex: 1; ">
+                            <span style="font-size: 30px;">💜</span> <br>
+                            <span class="message">센스만점!</span>
+                        </div>
+                        <div style="flex: 1; ">
+                            <span style="font-size: 30px;">😎</span> <br>
+                            <span class="message">공유하기</span>
+                        </div>
+                    </div>
+                    <button class="btn" >나도 답장하러갈래요!</button>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
