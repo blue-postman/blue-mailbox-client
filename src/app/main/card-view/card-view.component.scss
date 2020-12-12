@@ -2,20 +2,24 @@
   height: 100%;
   width: 100%;
   text-align: center;
-  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 30px;
 }
 
 .card-part-2 {
   width: 100%;
   text-align: center;
-  height: 15vh;
+  // height: 15vh;
 }
 
 .padding {
   display: inline-block;
   width: 80%;
-  padding: 10px;
+  // padding: 10px;
   text-align: center;
+  display: inline-block;
 }
 
 .card-bottom {
@@ -33,7 +37,7 @@
   background-color: #BAC4DA;
   border: none;
   padding: 10px;
-  font-size: 20px;
+  // font-size: 20px;
   border-radius: 10px;
   width: 100%;
   // position: absolute;
@@ -44,7 +48,7 @@
 
 
 p {
-  line-height: 190%;
+  line-height: 240%;
 }
 
 

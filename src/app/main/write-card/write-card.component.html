@@ -3,20 +3,18 @@
  <div class="main" *ngIf="card_data">
     <div class="padding">
         <div style="width: 100%; justify-content: center;
-        align-items: center; height: 70vh;">
+        align-items: center; margin-bottom: 50%;">
             <div style="padding: 20px">
                 <span class="card-title">💌 {{card_data.card_title}}</span>
                 <img [src]="card_data.card_img_url" style="width: 100%; margin-top: 10px; border-radius: 10px;">
             </div>
             <div>
-                <div style="width: 100%;">
-                    <select class="select" (change)="select_font($event.target.value)">
-                        <option *ngFor="let item of font_list">{{item.name}}</option>
-                    </select>
+                <select class="select" (change)="select_font($event.target.value)" >
+                    <option *ngFor="let item of font_list"><span [style.font-family]="item.value">{{item.name}}</span></option>
+                </select>
                     <!-- <div style="float: right;">
                         <div class="color" (click)="open_popup()"></div>
                     </div> -->
-                </div>
                 <textarea class="notes" [style.font-family]="font"></textarea>
                 <div style="width: 100%; text-align: right;">
                     <button class="btn" >다 작성했어요!</button>

@@ -2,18 +2,19 @@
     <!-- 대빵 큰 카드이미지  -->
     <ng-container *ngIf="card_data">
         <div class="card-part">
-            <div class="padding">
+            <div class="padding" style="margin-top: 70px;">
                 <img [src]="card_data.card_img_url" style="width: 100%; border-radius: 10px;">
             </div>
         </div>
         <br>
         <!-- 카드 설명과 버튼! -->
         <div class="card-part-2">
-            <div class="padding">
+            <div class="padding" style="text-align: left; margin-top: 30px;">
                 <span class="card-title">💌 {{card_data.card_title}} 카드</span>
                 <p>
-                    {{card_data.card_describe}}
+                    소망을 담아 크리스마스 편지를 보내보세요! 받는 사람도 분명 좋아할거에요! 당신의 따뜻한 진심 전하러 가볼까요?
                 </p>
+                <br>
                 <button class="btn" (click)="select_card(card_data.card_idx)">이 카드로 할래요!</button>
                 <!-- <div style="flex: 1; text-align: left;">
                     
