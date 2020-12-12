@@ -18,6 +18,7 @@ export const login_social = gql`
 export const my_info = gql`
 query{
     my_info{
+      user_idx
       user_name
     }
   }
@@ -62,6 +63,26 @@ query card_search($card_keyword: String!){
     card_describe
     card_img_url
     card_keyword
+  }
+}
+`;
+
+export const write_to_card = gql`
+mutation write_to_card($data: InputWriteCard!){
+  write_to_card(data: $data)
+}
+
+`;
+
+
+export const select_write_card = gql`
+query select_write_card($card_send_code: String!){
+  select_write_card(card_send_code: $card_send_code){
+    user_name
+    card_img_url
+    card_title
+    card_contents
+    card_font
   }
 }
 `;

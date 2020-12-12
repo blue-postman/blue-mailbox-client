@@ -35,7 +35,7 @@ const routes: Routes = [
     component: PublicComponent,
     children: [
       {
-        path: 'mail-box', // 공유한 카드 보는 컴포넌트라 분리가 필요.
+        path: 'mail-box/:send_code', // 공유한 카드 보는 컴포넌트라 분리가 필요.
         component: MailBoxComponent
       },      
       {

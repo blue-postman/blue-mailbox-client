@@ -29,7 +29,8 @@ export class MainComponent implements OnInit {
   }
 
   async load_data(){
-    const token = window.localStorage.getItem('token')
+    const token = window.localStorage.getItem('token');
+    console.log(token)
     if(token){
       this.my = await this.db.my_info();
       console.log(this.my)
