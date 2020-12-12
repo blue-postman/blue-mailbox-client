@@ -11,9 +11,9 @@ export class MainComponent implements OnInit {
 
   public list = [
     // { label: '내 정보', link: 'my-info'},
-    { label: '보낸 편지', link: 'send-card'},
-    { label: '기능요청', link: 'ready'},
-    { label: 'About', link: 'about'},
+    { label: '보낸 편지', link: ''},
+    { label: '기능요청', link: ''},
+    { label: 'About', link: ''},
   ]
 
   public my
@@ -25,13 +25,16 @@ export class MainComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
+    this.load_data()
+  }
+
+  async load_data(){
     const token = window.localStorage.getItem('token')
     if(token){
       this.my = await this.db.my_info();
       console.log(this.my)
     }
   }
-
 
   layer_popup_open(){
     this.opened = true;
@@ -96,7 +99,8 @@ export class MainComponent implements OnInit {
 
   logout(){
     window.localStorage.removeItem('token');
+    this.my = null
     this.opened = false;
-    this.ngOnInit()
+    this.load_data()
   }
 }
