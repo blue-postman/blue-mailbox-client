@@ -57,7 +57,36 @@ button {
   transition-delay: 0.2s;
 }
 
-.layer{
+// 팝업처리는 조금 다르게 (웹)
+@media screen and (min-width: 769px) {
+  .layer{
+    top: 0; bottom: 0;
+    height: 100vh;
+    width: 480px;
+    position: absolute;
+    z-index: 100;
+    text-align: center;
+    background-color: rgba(228, 228, 228, 0.85);
+    // background-color: #E4E4E4;
+    // opacity: 0.3;
+    position: fixed;
+  }
+
+  p{
+    font-size: 30px;
+  }
+
+  .layer-item{
+      text-align: left; 
+      left: 50%; 
+      position: absolute; 
+      margin-top: 40%;
+      transform: translate(-50%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .layer{
     top: 0; bottom: 0;
     height: 100vh;
     width: 100%;
@@ -68,18 +97,23 @@ button {
     // background-color: #E4E4E4;
     // opacity: 0.3;
     position: fixed;
+  }
+
+  p{
+    font-size: 24px;
+  }
+
+  .layer-item{
+      text-align: left; 
+      left: 50%; 
+      position: absolute; 
+      margin-top: 20%;
+      transform: translate(-50%);
+  }
 }
 
-p{
-    font-size: 35px;
-}
 
-.layer-item{
-    text-align: left; 
-    left: 50%; 
-    position: absolute; 
-    margin-top: 15%;
-}
+
 
 footer {
     text-align: center;
@@ -91,4 +125,8 @@ footer {
 .dd{
   position: relative;
   display: block;
+}
+
+p:hover{
+  background-color: #7cb3d1cb;
 }

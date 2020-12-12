@@ -13,11 +13,11 @@
                     <select class="select">
                         <option *ngFor="let item of font_list">{{item.name}}</option>
                     </select>
-                    <div style="float: right;">
+                    <!-- <div style="float: right;">
                         <div class="color" (click)="open_popup()"></div>
-                    </div>
+                    </div> -->
                 </div>
-                <textarea class="notes"></textarea>
+                <textarea class="notes" [style.find]></textarea>
                 <div style="width: 100%; text-align: right;">
                     <button class="btn" >다 작성했어요!</button>
                 </div>
