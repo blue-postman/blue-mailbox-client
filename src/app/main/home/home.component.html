@@ -1,18 +1,34 @@
+
+<!-- 메인카드 이미지 영역 -->
+<div class="main-card">
+    <img [src]="main_img_url" style="width: 90%; border-radius: 10px; box-shadow:5px 5px 10px rgb(148, 148, 148);">
+    <!-- <div style="text-align: center; position: absolute; left: 50;"> -->
+        <p>
+            <!-- <span class="font-color">파란우체통</span>과 함께<br>
+            🎅🏻크리스마스 편지를 보내보세요:-)   <br> -->
+            <span style="font-weight: bold;">🎄 MERRY CHRISTMAS!</span> <br>
+            <span class="font-color">파란우체통</span>과 마음을 전해요 :-) <br>
+    
+            현재까지 나눈 카드 <span class="font-color">199,993</span>통!
+        </p>
+    <!-- </div> -->
+    
+    <!-- <div class="image">
+        <div class="card"><img src="assets/img/banner11.png" style="width: 90%; border-radius: 10px;"></div>
+        
+    <!-- </div> --> 
+</div>
+
+<br><br>
 <!-- 간단 베너 영역 -->
-<div class="small-banner">
+<!-- <div class="small-banner" style="margin-top: 40px;">
     <p>
         <span class="font-color">파란우체통</span>과 함께 따뜻한 마음을 나눠요 :) <br>
         현재까지 나눈 카드 <span class="font-color">199,993</span>통!
     </p>
-</div>
+</div> -->
 
-<!-- 메인카드 이미지 영역 -->
-<div class="main-card">
-    <div class="image">
-        <div class="card"><img [src]="main_img_url" style="width: 680px; border-radius: 10px;"></div>
-        <!-- <div class="envelope"><img src="assets/img/envelope-ex.png"></div> -->
-    </div>
-</div>
+<br>
 
 <!-- 인기있는 카드 영역 -->
 <div class="card-list">
@@ -23,8 +39,8 @@
         </div>
         <div class="card-item">
             <div class="item" *ngFor="let item of card_list_pop" (click)="link_to_card_view(item.card_idx)" [style.backgroundImage]="'url('+ item.card_img_url +')'">
-                <!-- <img [src]="item.card_img_url" style="width: 100%;">
-                <div [style.back]></div> -->
+                <!-- <img [src]="item.card_img_url" style="width: 12vw; height: 8vw;"> -->
+                <!-- <div [style.back]></div> -->
             </div>
             &nbsp;
         </div>

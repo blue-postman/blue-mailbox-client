@@ -1,18 +1,21 @@
 .app {
   margin-top: 15px;
-  height: 13vh;
+  height: 10vh;
   // background-color: antiquewhite;
   text-align: center;
+  display: flex;    flex: 0 0 60px;
+  justify-content: space-between;
 }
 
 img {
+  margin-top: 10px;
   width: 130px;
   vertical-align: middle;
 }
 
 .hamburger {
   vertical-align: middle;
-  display: inline-block
+  display: inline-block;
 }
 
 button {
@@ -23,15 +26,15 @@ button {
 #menu {
   position: absolute;
   width: 50px;
-  right: 20px;
+  // right: 20px;
   top: 20px
 }
 
 #menu>span {
   display: block;
-  width: 100%;
+  // width: 100%;
   height: 8px;
-  background: #BAC4DA;
+  background: #0E79B4;
   margin: 4px 0;
   border-radius: 10px;
   transition: all 0.5s;
@@ -46,11 +49,11 @@ button {
 
 #menu>.on:nth-child(2) {
   opacity: 0;
-  transform: translateX(50px);
+  // transform: translateX(50px);
 }
 
 #menu>.on:nth-child(3) {
-  transform: translateY(-11px) rotate(-225deg);
+  // transform: translateY(-11px) rotate(-225deg);
   transition-delay: 0.2s;
 }
 
@@ -83,4 +86,9 @@ footer {
     padding: 3px;
     background-color: rgb(212, 212, 212);
     color: white;
+}
+
+.dd{
+  position: relative;
+  display: block;
 }
