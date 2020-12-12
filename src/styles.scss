@@ -83,6 +83,41 @@ button input textarea{
       background-repeat: no-repeat;
       background-position : center;
     }
+
+
+.signup-popup {
+  width: 480px;
+  text-align: center;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(99, 99, 99, 0.9);
+  position: fixed;
+}
+
+.popup {
+  display: flex;
+  width: 80%;
+  height: 55%;
+  background-color: rgba(228, 228, 228);
+  vertical-align: middle;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+
+.popup-p {
+  font-size: 22px;
+  line-height: 190%;
+  margin-bottom: 10px;
+}
   }
 
   // 앱
@@ -146,6 +181,40 @@ button input textarea{
     background-repeat: no-repeat;
     background-position : center;
   }
+
+
+.signup-popup {
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(99, 99, 99, 0.9);
+}
+
+.popup {
+  display: flex;
+  width: 50%;
+  height: 55%;
+  background-color: rgba(228, 228, 228);
+  vertical-align: middle;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+
+.popup-p {
+  font-size: 28px;
+  line-height: 190%;
+  margin-bottom: 10px;
+}
   }
 
   @font-face {

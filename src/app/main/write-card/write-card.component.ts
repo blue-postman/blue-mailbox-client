@@ -14,6 +14,8 @@ export class WriteCardComponent implements OnInit {
 
   public font;
   public card_content = '';
+
+  public url;
   
   public font_list = [
     { name: '마루부리', value: "'MaruBuri-Regular'" },
@@ -88,8 +90,11 @@ export class WriteCardComponent implements OnInit {
   // 카드 다 작성했어요!
   async write_card_complete(){
 
+    this.opened = true;
+
     if(this.card_content == ''){
-      alert("내용을 작성해주세요!")
+      alert("내용을 작성해주세요!");
+      return;
       // this.notifyService.showSuccess("Data shown successfully !!", "ItSolutionStuff.com")
     }
     
@@ -101,5 +106,6 @@ export class WriteCardComponent implements OnInit {
 
     const code = await this.db.write_to_card(data)
     console.log(code)
+    this.url = `http://localhost:4200/mail-box/${code}`
   }
 }
