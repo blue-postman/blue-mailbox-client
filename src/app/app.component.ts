@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from 'src/graphql/data-services';
-
+const Snowflakes = require('magic-snowflakes');
 
 declare var Kakao;
 
@@ -20,7 +20,6 @@ export class AppComponent {
     // await this.app.user.fetch();
 
     Kakao.init('0b8e7cd27baa620364eb9d8aac322f32');
-
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     // let s_key = window.localStorage.getItem('secret-key');
@@ -28,5 +27,10 @@ export class AppComponent {
     //   this.app.go('secret');
     //   return;
     // }
+    let broswerInfo = navigator.userAgent;
+    if(broswerInfo.indexOf("app_pomelove")>-1 || broswerInfo.indexOf("iPhone")>-1){
+    }else{
+      Snowflakes();
+    }
   }
 }
