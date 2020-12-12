@@ -42,10 +42,13 @@ button input textarea{
     }
 
     .card-arrow {
-      // font-weight: bold;
       text-align: right;
       font-size: 18px;
       flex: 1;
+    }
+
+    .message{
+      font-size: 18px;
     }
   }
 
@@ -69,7 +72,15 @@ button input textarea{
       text-align: right;
       font-size: 16px;
       flex: 1;
-  }
+    }
+
+    button{
+      font-size: 14px;
+    }
+
+    .message{
+      font-size: 13px;
+    }
   }
 
   @font-face {

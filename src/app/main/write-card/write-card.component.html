@@ -8,7 +8,7 @@
                 <span class="card-title">💌 {{card_data.card_title}}</span>
                 <img [src]="card_data.card_img_url" style="width: 100%; margin-top: 10px; border-radius: 10px;">
             </div>
-            <div style="">
+            <div>
                 <div style="width: 100%;">
                     <select class="select" (change)="select_font($event.target.value)">
                         <option *ngFor="let item of font_list">{{item.name}}</option>
