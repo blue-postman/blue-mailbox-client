@@ -45,7 +45,7 @@
   <!-- </div> -->
 
   <!-- 회원가입 안했을 시에 나타나아ㅏ아아암 -->
-  <div class="signup-popup" *ngIf="opened">
+  <div class="signup-popup">
     <div class="popup">
       <span class="close-btn" (click)="close_popup()">X</span>
       <div style="width: 60%; text-align: center;">
@@ -56,8 +56,18 @@
         </span>
         <br>
         <br>
-        <input type="text" class="search-input" [(ngModel)]="url" readonly>
-        <button class="kakao-btn" id="kakao-link-btn" style="padding: 5px 10px;" (click)="click()">카카오톡으로 공유하기</button>
+        <div style="display: flex; width: 100%">
+            <div style="flex: 1; width: 100%; padding: 2px;">
+                <span class="material-icons" (click)="copy_to()">
+                    content_copy
+                </span>
+            </div>
+            <div style="flex: 9;" >
+                <input type="text" class="search-input" [(ngModel)]="url" readonly>
+            </div>
+        </div>
+        <!--  -->
+        <button class="kakao-btn" style="padding: 5px 10px;" (click)="click()">카카오톡으로 공유하기</button>
       </div>
-    </div>
+   </div>
   </div>

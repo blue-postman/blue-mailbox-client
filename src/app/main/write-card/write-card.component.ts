@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/graphql/data-services';
-
+import * as copy from 'copy-to-clipboard';
 declare var Kakao;
 @Component({
   selector: 'app-write-card',
@@ -142,5 +142,8 @@ export class WriteCardComponent implements OnInit {
         }
       ]
     });
+  }
+  copy_to(){
+    copy(this.url)
   }
 }

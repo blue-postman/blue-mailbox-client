@@ -20,7 +20,7 @@ export class AppComponent {
     Kakao.init('0b8e7cd27baa620364eb9d8aac322f32');
 
     let broswerInfo = navigator.userAgent;
-    if(broswerInfo.indexOf("app_pomelove")>-1 || broswerInfo.indexOf("iPhone")>-1){
+    if(broswerInfo.indexOf("app_pomelove")>-1 || broswerInfo.indexOf("iPhone")>-1|| broswerInfo.indexOf("Android")>-1){
     }else{
       Snowflakes();
     }
