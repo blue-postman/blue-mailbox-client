@@ -110,7 +110,7 @@ export class WriteCardComponent implements OnInit {
     }
 
     this.data = await this.db.write_to_card(data)
-    this.url = `http://blue-mailbox-deploy.s3-website.ap-northeast-2.amazonaws.com/${this.data.card_send_code}`
+    this.url = `http://blue-mailbox-deploy.s3-website.ap-northeast-2.amazonaws.com/mail-box/${this.data.card_send_code}`
   }
 
   click(){
