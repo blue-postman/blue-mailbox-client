@@ -45,7 +45,7 @@
   <!-- </div> -->
 
   <!-- 회원가입 안했을 시에 나타나아ㅏ아아암 -->
-  <div class="signup-popup">
+  <div class="signup-popup" *ngIf="opened">
     <div class="popup">
       <span class="close-btn" (click)="close_popup()">X</span>
       <div style="width: 60%; text-align: center;">
