@@ -19,6 +19,7 @@
           <div style="width: 100%; text-align: right;">
             <button class="btn" (click)="write_card_complete()">다 작성했어요!</button>
           </div>
+
         </div>
       </div>
     </div>
@@ -56,7 +57,7 @@
         <br>
         <br>
         <input type="text" class="search-input" [(ngModel)]="url" readonly>
-        <button class="kakao-btn" style="padding: 5px 10px;">카카오톡으로 공유하기</button>
+        <button class="kakao-btn" id="kakao-link-btn" style="padding: 5px 10px;" (click)="click()">카카오톡으로 공유하기</button>
       </div>
     </div>
   </div>

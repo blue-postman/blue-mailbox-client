@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/graphql/data-services';
 
+declare var Kakao;
 @Component({
   selector: 'app-write-card',
   templateUrl: './write-card.component.html',
@@ -11,6 +12,8 @@ export class WriteCardComponent implements OnInit {
 
   public card_idx;
   public card_data;
+
+  public data;
 
   public font;
   public card_content = '';
@@ -59,6 +62,7 @@ export class WriteCardComponent implements OnInit {
     this.font = this.font_list[0].value
     this.card_idx = Number(params.card_idx);
     this.load_data();
+
   }
 
   async load_data(){
@@ -105,8 +109,38 @@ export class WriteCardComponent implements OnInit {
       card_font: this.font
     }
 
-    const code = await this.db.write_to_card(data)
-    console.log(code)
-    this.url = `http://localhost:4200/mail-box/${code}`
+    this.data = await this.db.write_to_card(data)
+    this.url = `http://localhost:4200/mail-box/${this.data.card_send_code}`
+  }
+
+  click(){
+
+    Kakao.Link.createDefaultButton({
+      container: '#kakao-link-btn',
+      objectType: 'feed',
+      content: {
+        title: `${this.data.user_name}님이 보낸 따뜻한 카드 도착!`,
+        description: `💌 당신에게 '${this.data.card_title}' 카드가 도착했습니다 얼른 확인하러가보세요!`,
+        imageUrl: this.data.card_img_url,
+        link: {
+          mobileWebUrl: this.url,
+          webUrl: this.url
+        }
+      },
+      // social: {
+      //   likeCount: 286,
+      //   commentCount: 45,
+      //   sharedCount: 845
+      // },
+      buttons: [
+        {
+          title: '지금 보러가기!',
+          link: {
+            mobileWebUrl: this.url,
+            webUrl: this.url
+          }
+        }
+      ]
+    });
   }
 }
