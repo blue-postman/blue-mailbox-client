@@ -69,9 +69,13 @@ query card_search($card_keyword: String!){
 
 export const write_to_card = gql`
 mutation write_to_card($data: InputWriteCard!){
-  write_to_card(data: $data)
+  write_to_card(data: $data){
+    card_send_code
+    card_img_url
+    user_name
+    card_title
+  }
 }
-
 `;
 
 
