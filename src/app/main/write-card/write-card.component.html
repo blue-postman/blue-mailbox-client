@@ -1,32 +1,32 @@
 <div style="min-height: 100vh;">
-    <!-- 카드를 씁시다! -->
- <div class="main" *ngIf="card_data">
+  <!-- 카드를 씁시다! -->
+  <div class="main" *ngIf="card_data">
     <div class="padding">
-        <div style="width: 100%; justify-content: center;
+      <div style="width: 100%; justify-content: center;
         align-items: center; margin-bottom: 50%;">
-            <div style="padding: 20px">
-                <span class="card-title">💌 {{card_data.card_title}}</span>
-                <img [src]="card_data.card_img_url" style="width: 100%; margin-top: 10px; border-radius: 10px;">
-            </div>
-            <div>
-                <select class="select" (change)="select_font($event.target.value)" >
-                    <option *ngFor="let item of font_list"><span [style.font-family]="item.value">{{item.name}}</span></option>
-                </select>
-                    <!-- <div style="float: right;">
+        <div style="padding: 20px">
+          <span class="card-title">💌 {{card_data.card_title}}</span>
+          <img [src]="card_data.card_img_url" style="width: 100%; margin-top: 10px; border-radius: 10px;">
+        </div>
+        <div>
+          <select class="select" (change)="select_font($event.target.value)">
+            <option *ngFor="let item of font_list"><span [style.font-family]="item.value">{{item.name}}</span></option>
+          </select>
+          <!-- <div style="float: right;">
                         <div class="color" (click)="open_popup()"></div>
                     </div> -->
-                <textarea class="notes" [style.font-family]="font" [(ngModel)]="card_content"></textarea>
-                <div style="width: 100%; text-align: right;">
-                    <button class="btn" (click)="write_card_complete()" >다 작성했어요!</button>
-                </div>
-            </div>
+          <textarea class="notes" [style.font-family]="font" [(ngModel)]="card_content"></textarea>
+          <div style="width: 100%; text-align: right;">
+            <button class="btn" (click)="write_card_complete()">다 작성했어요!</button>
+          </div>
         </div>
+      </div>
     </div>
- </div>   
+  </div>
 
 
- <!-- 색상 선택 팝업 -->
- <!-- <div class="color-popup" *ngIf="opened">
+  <!-- 색상 선택 팝업 -->
+  <!-- <div class="color-popup" *ngIf="opened">
     <div class="popup">
         <span class="close-btn" (click)="close_popup()">X</span>
         <div class="color-item">
@@ -40,24 +40,23 @@
         </div>
     </div>
 </div> -->
-<!-- 작성 끝 공유 팝업 !!!!!! -->
-<!-- </div> -->
+  <!-- 작성 끝 공유 팝업 !!!!!! -->
+  <!-- </div> -->
 
-<!-- 회원가입 안했을 시에 나타나아ㅏ아아암 --> 
-<div class="signup-popup" *ngIf="opened">
+  <!-- 회원가입 안했을 시에 나타나아ㅏ아아암 -->
+  <div class="signup-popup" *ngIf="opened">
     <div class="popup">
-        <span class="close-btn" (click)="close_popup()">X</span>
-        <div style="width: 60%;">
-            <span class="popup-p">
-                <span style="font-size: 60px;">💌</span> <br>
-                소중한 편지가 <br> 작성되었어요! <br>
-                얼른 공유해주세요 :-) 
-            </span>
-            <br>
-            <br>
-            <input type="text" class="search-input" [(ngModel)]="url" readonly >
-            <!-- <button class="kakao-btn" (clickdfdfd)="login_kakao()">카카오톡으로 가입하기</button> -->
-        </div>
+      <span class="close-btn" (click)="close_popup()">X</span>
+      <div style="width: 60%; text-align: center;">
+        <span class="popup-p">
+          <span class="emoji">💌</span> <br>
+          소중한 편지가 <br> 작성되었어요! <br>
+          얼른 공유해주세요 :-)
+        </span>
+        <br>
+        <br>
+        <input type="text" class="search-input" [(ngModel)]="url" readonly>
+        <button class="kakao-btn" style="padding: 5px 10px;">카카오톡으로 공유하기</button>
+      </div>
     </div>
-</div>
- 
+  </div>

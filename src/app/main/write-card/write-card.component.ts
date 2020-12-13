@@ -90,14 +90,15 @@ export class WriteCardComponent implements OnInit {
   // 카드 다 작성했어요!
   async write_card_complete(){
 
-    this.opened = true;
-
     if(this.card_content == ''){
       alert("내용을 작성해주세요!");
       return;
       // this.notifyService.showSuccess("Data shown successfully !!", "ItSolutionStuff.com")
     }
     
+    this.opened = true;
+
+  
     const data = {
       card_idx: Number(this.card_idx),
       card_contents: this.card_content,
