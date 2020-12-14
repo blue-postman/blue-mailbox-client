@@ -5,6 +5,7 @@ import { CardComponent } from './main/card/card.component';
 import { HomeComponent } from './main/home/home.component';
 import { MainComponent } from './main/main.component';
 import { MyInfoComponent } from './main/my-info/my-info.component';
+import { SendCardViewComponent } from './main/send-card-view/send-card-view.component';
 import { SendCardComponent } from './main/send-card/send-card.component';
 import { SignUpComponent } from './main/sign-up/sign-up.component';
 import { WriteCardComponent } from './main/write-card/write-card.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
       { path: 'send-card', component: SendCardComponent }, // 보낸카드 모아보는 컴포넌트
       { path: 'write-card/:card_idx', component: WriteCardComponent },
       { path: 'sign-up', component: SignUpComponent },
+      { path: 'send-card-view/:card_idx', component: SendCardViewComponent },
     ]
   },
   {

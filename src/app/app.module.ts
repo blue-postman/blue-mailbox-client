@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ToastrModule } from 'ngx-toastr';
+import { SendCardViewComponent } from './main/send-card-view/send-card-view.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { ToastrModule } from 'ngx-toastr';
     MyInfoComponent,
     SendCardComponent,
     LoginCallbackComponent,
-    SignUpComponent
+    SignUpComponent,
+    SendCardViewComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,25 @@
+
+.card-list {
+    width: 100%;
+    // height: 35vh;  
+    text-align: center;
+  }
+  
+  .padding {
+    display: inline-block;
+    width: 80%;
+    text-align: left;
+  }
+  
+  .card-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    // font-size: 18px;
+    flex: 1;
+  }

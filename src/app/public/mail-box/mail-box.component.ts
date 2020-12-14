@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { MatSnackBar } from '@angular/material';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from 'src/graphql/data-services';
+import * as copy from 'copy-to-clipboard';
 
 @Component({
   selector: 'app-mail-box',
@@ -16,19 +18,15 @@ export class MailBoxComponent implements OnInit {
   public send_code;
   public card_data;
 
-  public letter = `안녕 하이
-  너에게 편지를 쓴다
-  잘 받앗길 빈다
-  졸리다
-  언제끝나지
-  할게 넘 많아
-  ㅠㅠ
-  졸려
-  졸렁나이라너ㅣㅏ너리나`
+  public url;
+
+  public opened:boolean = false;
 
   constructor(
     private db: DataService,
     private route: ActivatedRoute,
+    private _snackBar: MatSnackBar,
+    private router: Router, 
   ) { }
 
   async ngOnInit() {
@@ -58,8 +56,50 @@ export class MailBoxComponent implements OnInit {
     this.card_data = await this.db.select_write_card(this.send_code);
     
     if(!this.card_data){
-      alert("잘못된주소")
+      this._snackBar.open('잘못된 접근입니다 🥲', '', {
+        duration: 2000,
+      });
+      this.go_home();
     }
   }
 
+  async emotion_btn(num){
+
+    let message;
+
+    if(num==1) {
+      message = '💙💙💙 감동했어요!';
+    } else if (num==2){
+      message = '💛💛💛 고마워요!';
+    } else {
+      message = '💜💜💜 센스만점!';
+    }
+
+    this._snackBar.open(message, '', {
+      duration: 1000,
+    });
+  }
+
+  close_popup(){
+    this.opened = false;
+  }
+
+  share_to(){
+    this.opened = true;
+    this.url = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+  }
+
+  copy_to(){
+    copy(this.url)
+
+    this._snackBar.open('😎 주소가 복사 되었습니다. 얼른 공유해주세요!', '', {
+      duration: 2000,
+    });
+  }
+
+  go_home(){
+    this.router.navigateByUrl(`/home`);
+  }
 }
+
+

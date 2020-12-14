@@ -93,5 +93,18 @@ query select_write_card($card_send_code: String!){
 
 
 
+export const write_card_list = gql`
+query write_card_list{
+  write_card_list{
+    card_send_code
+    user_name
+    card_img_url
+    card_title
+    card_contents
+    card_font
+    card_idx
+  }
+}
+`;
 
 

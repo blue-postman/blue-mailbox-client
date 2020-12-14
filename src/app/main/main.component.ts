@@ -12,7 +12,7 @@ export class MainComponent implements OnInit {
 
   public list = [
     // { label: '내 정보', link: 'my-info'},
-    { label: '보낸 편지', link: ''},
+    { label: '보낸 편지', link: 'send-card'},
     { label: '기능요청', link: ''},
     { label: 'About', link: ''},
   ]
@@ -20,6 +20,9 @@ export class MainComponent implements OnInit {
   public my
   public opened: boolean = false;
   public sign_opened: boolean = false;
+
+  public my_info_modal: boolean = false;
+
   constructor(
     private router: Router, 
     private db: DataService,
@@ -111,5 +114,10 @@ export class MainComponent implements OnInit {
     this._snackBar.open('🥲 로그아웃 되었습니다.', '', {
       duration: 2000,
     });
+  }
+
+  open(){
+    this.opened = false
+    this.my_info_modal = true;
   }
 }

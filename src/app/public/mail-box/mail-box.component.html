@@ -18,8 +18,8 @@
             <ng-container *ngIf="mailbox">
                 <div style="text-align: center; margin-bottom: 50%;" *ngIf="!card">
                     <img [src]="card_data.card_img_url" style="width: 90%; border-radius: 10px; box-shadow:5px 5px 10px rgb(148, 148, 148);">
-                    <br>
-                    <span style="margin-top: 20px;">편지 읽어오는 중......</span>
+                    <br><br>
+                    <span style="margin-top: 100px;">편지 읽어오는 중......</span>
                 </div>
             </ng-container>
             <ng-container *ngIf="card && mailbox">
@@ -27,26 +27,51 @@
                     <img [src]="card_data.card_img_url" style="margin-top: 30px; width: 90%; border-radius: 10px; box-shadow:5px 5px 10px rgb(148, 148, 148);">
                     <textarea class="notes" [style.font-family]="card_data.card_font" readonly>{{card_data.card_contents}}</textarea>
                     <div style="display: flex; width: 100%; text-align: center;">
-                        <div style="flex: 1; ">
+                        <div style="flex: 1; " (click)="emotion_btn(1)">
                             <span style="font-size: 30px;">💙</span> <br>
                             <span class="message">감동했어요!</span>
                         </div>
-                        <div style="flex: 1; ">
+                        <div style="flex: 1; " (click)="emotion_btn(2)">
                             <span style="font-size: 30px;">💛</span> <br>
                             <span class="message">고마워요!</span>
                         </div>
-                        <div style="flex: 1; ">
+                        <div style="flex: 1; " (click)="emotion_btn(3)">
                             <span style="font-size: 30px;">💜</span> <br>
                             <span class="message">센스만점!</span>
                         </div>
                         <div style="flex: 1; ">
                             <span style="font-size: 30px;">😎</span> <br>
-                            <span class="message">공유하기</span>
+                            <span class="message" (click)="share_to()">공유하기</span>
                         </div>
                     </div>
-                    <button class="btn" >나도 답장하러갈래요!</button>
+                    <button class="btn" (click)="go_home()">나도 답장하러갈래요!</button>
                 </div>
             </ng-container>
         </div>
     </div>
 </div>
+
+<div class="signup-popup" *ngIf="opened">
+    <div class="popup">
+      <span class="close-btn" (click)="close_popup()">X</span>
+      <div style="width: 60%; text-align: center;">
+        <span class="popup-p">
+          <span class="emoji">💌</span> <br>
+          소중한 편지를 <br> 받았어요! <br>
+          자랑하고 싶으면 공유해주세요 :-)
+        </span>
+        <br>
+        <br>
+        <div style="display: flex; width: 100%">
+            <div style="flex: 1; width: 100%; padding: 2px;">
+                <span class="material-icons" (click)="copy_to()">
+                    content_copy
+                </span>
+            </div>
+            <div style="flex: 9;" >
+                <input type="text" class="search-input" [(ngModel)]="url" readonly>
+            </div>
+        </div>
+      </div>
+   </div>
+  </div>
