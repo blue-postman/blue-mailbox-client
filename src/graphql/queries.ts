@@ -39,7 +39,7 @@ query{
       card_idx
       card_img_url
     }
-
+    card_count
   }
 }
 `;

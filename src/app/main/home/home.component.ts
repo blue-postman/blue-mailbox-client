@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   public main_img_url; // 메인화면 이미지
   public card_list_pop;
   public card_list_christmas;
+  public card_count;
 
   public data_list = [
     { item: 1, src: ''},
@@ -32,6 +33,8 @@ export class HomeComponent implements OnInit {
 
   async load_data(){
     const data = await this.db.select_main();
+
+    this.card_count = data.card_count
     this.main_img_url = data.main_img.card_img_url;
     this.card_list_pop = data.card_list_pop;
     this.card_list_christmas = data.card_list_christmas;
