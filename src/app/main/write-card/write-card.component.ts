@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/graphql/data-services';
 import * as copy from 'copy-to-clipboard';
+import { MatSnackBar } from '@angular/material';
 declare var Kakao;
 @Component({
   selector: 'app-write-card',
@@ -55,6 +56,7 @@ export class WriteCardComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     public db: DataService,
+    private _snackBar: MatSnackBar
   ) { }
 
   ngOnInit() {
@@ -95,7 +97,9 @@ export class WriteCardComponent implements OnInit {
   async write_card_complete(){
 
     if(this.card_content == ''){
-      alert("내용을 작성해주세요!");
+      this._snackBar.open('💌 편지를 입력해주세요 ', '', {
+        duration: 2000,
+      });
       return;
       // this.notifyService.showSuccess("Data shown successfully !!", "ItSolutionStuff.com")
     }
@@ -145,5 +149,9 @@ export class WriteCardComponent implements OnInit {
   }
   copy_to(){
     copy(this.url)
+
+    this._snackBar.open('😎 주소가 복사 되었습니다. 얼른 공유해주세요!', '', {
+      duration: 2000,
+    });
   }
 }

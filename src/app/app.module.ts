@@ -19,7 +19,9 @@ import { LoginCallbackComponent } from './public/login-callback/login-callback.c
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { SignUpComponent } from './main/sign-up/sign-up.component';
 import { FormsModule } from '@angular/forms';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +42,9 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     GraphQLModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule, // required animations module
+    MatSnackBarModule
   ],
   providers: [
     DataService,

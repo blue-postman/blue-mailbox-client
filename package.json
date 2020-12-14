@@ -12,7 +12,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~8.2.14",
+    "@angular/animations": "^8.2.14",
     "@angular/cdk": "^8.2.3",
     "@angular/common": "~8.2.14",
     "@angular/compiler": "~8.2.14",
@@ -36,6 +36,7 @@
     "copy-to-clipboard": "^3.3.1",
     "graphql": "^15.4.0",
     "graphql-tag": "^2.11.0",
+    "ngx-toastr": "^13.2.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

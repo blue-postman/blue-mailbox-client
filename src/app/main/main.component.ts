@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
 import { DataService } from 'src/graphql/data-services';
 declare var Kakao;
@@ -21,7 +22,8 @@ export class MainComponent implements OnInit {
   public sign_opened: boolean = false;
   constructor(
     private router: Router, 
-    private db: DataService
+    private db: DataService,
+    private _snackBar: MatSnackBar
   ) { }
 
   async ngOnInit() {
@@ -103,5 +105,9 @@ export class MainComponent implements OnInit {
     this.my = null
     this.opened = false;
     this.load_data()
+
+    this._snackBar.open('🥲 로그아웃 되었습니다.', '', {
+      duration: 2000,
+    });
   }
 }
