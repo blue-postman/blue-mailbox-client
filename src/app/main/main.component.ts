@@ -102,6 +102,8 @@ export class MainComponent implements OnInit {
 
   logout(){
     window.localStorage.removeItem('token');
+    window.localStorage.removeItem('card_idx');
+    
     this.my = null
     this.opened = false;
     this.load_data()
