@@ -91,8 +91,6 @@ query select_write_card($card_send_code: String!){
 }
 `;
 
-
-
 export const write_card_list = gql`
 query write_card_list{
   write_card_list{
@@ -107,4 +105,9 @@ query write_card_list{
 }
 `;
 
+export const add_request = gql`
+mutation add_request($data: InputRequest!){
+  add_request(data: $data)
+}
+`;
 

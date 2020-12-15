@@ -5,6 +5,7 @@ import { CardComponent } from './main/card/card.component';
 import { HomeComponent } from './main/home/home.component';
 import { MainComponent } from './main/main.component';
 import { MyInfoComponent } from './main/my-info/my-info.component';
+import { RequestComponent } from './main/request/request.component';
 import { SendCardViewComponent } from './main/send-card-view/send-card-view.component';
 import { SendCardComponent } from './main/send-card/send-card.component';
 import { SignUpComponent } from './main/sign-up/sign-up.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
       { path: 'write-card/:card_idx', component: WriteCardComponent },
       { path: 'sign-up', component: SignUpComponent },
       { path: 'send-card-view/:card_idx', component: SendCardViewComponent },
+      { path: 'request', component: RequestComponent },
     ]
   },
   {

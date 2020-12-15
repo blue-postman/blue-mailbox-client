@@ -12,8 +12,8 @@ export class MainComponent implements OnInit {
 
   public list = [
     // { label: '내 정보', link: 'my-info'},
-    { label: '보낸 편지', link: 'send-card'},
-    { label: '기능요청', link: ''},
+    // { label: '보낸 편지', link: 'send-card'},
+    { label: '기능요청', link: 'request'},
     { label: 'About', link: ''},
   ]
 

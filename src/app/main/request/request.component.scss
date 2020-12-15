@@ -1,0 +1,27 @@
+.card-part {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    // margin-top: 30px;
+  }
+
+  .padding {
+    display: inline-block;
+    width: 90%;
+    // padding: 10px;
+    text-align: center;
+  }
+
+  .btn {
+    background-color: #BAC4DA;
+    border: none;
+    padding: 10px;
+    // font-size: 17px;
+    border-radius: 10px;
+    width: 200px;
+    margin-top: 20px;
+  }
+  
