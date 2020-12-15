@@ -8,9 +8,38 @@
         <textarea class="notes" [style.font-family]="card_item.card_font"
           readonly>{{card_item.card_contents}}</textarea>
 
-        <button class="btn" (click)="go_back()">뒤로가기</button>
-      </div>
-
+          <div style="display: flex; width: 100%; padding: 4px;">
+            <div style="width: 80%;"><button class="btn" (click)="go_back()">뒤로가기</button></div>
+            <div style="width: 80%;"><button class="btn" (click)="share_to()">공유하기</button></div>
+          </div>
     </div>
   </div>
 </div>
+
+<div class="signup-popup" *ngIf="opened">
+  <div class="popup">
+    <span class="close-btn" (click)="close_popup()">X</span>
+    <div style="width: 60%; text-align: center;">
+      <span class="popup-p">
+        <span class="emoji">💌</span> <br>
+        소중한 편지가 <br> 작성되었어요! <br>
+        얼른 공유해주세요 :-)
+      </span>
+      <br>
+      <br>
+      <div style="display: flex; width: 100%">
+          <div style="flex: 1; width: 100%; padding: 2px;">
+              <span class="material-icons" (click)="copy_to()">
+                  content_copy
+              </span>
+          </div>
+          <div style="flex: 9;" >
+              <input type="text" class="search-input" [(ngModel)]="url" readonly>
+          </div>
+      </div>
+      <!--  -->
+      <!-- <button class="kakao-btn" id="kakao-link-btn" style="padding: 5px 10px;" (click)="click()">카카오톡으로 공유하기</button> -->
+    </div>
+ </div>
+</div>
+
