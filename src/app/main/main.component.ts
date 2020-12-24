@@ -14,7 +14,8 @@ export class MainComponent implements OnInit {
     // { label: '내 정보', link: 'my-info'},
     // { label: '보낸 편지', link: 'send-card'},
     { label: '기능요청', link: 'request'},
-    { label: 'About', link: ''},
+    { label: 'About', link: 'about'},
+    { label: 'Instagram', link: 'insta'},
   ]
 
   public my
@@ -58,7 +59,16 @@ export class MainComponent implements OnInit {
 
   link_to_page(link){
     this.layer_popup_close()
-    this.router.navigateByUrl(`/${link}`);
+
+    if(link == 'about'){
+      window.open(`https://github.com/blue-postman`, '_blank');
+    }else if(link == 'insta') {
+      window.open(`https://www.instagram.com/_blue_mailbox/`, '_blank');
+    }else{
+      this.router.navigateByUrl(`/${link}`);
+    }
+
+    
   }
   
 
