@@ -6,7 +6,7 @@
         <p>
             <!-- <span class="font-color">파란우체통</span>과 함께<br>
             🎅🏻크리스마스 편지를 보내보세요:-)   <br> -->
-            <span style="font-weight: bold;">🎄 MERRY CHRISTMAS!</span> <br>
+            <span style="font-weight: bold;">🐮 HAPPY NEW YEAR !!</span> <br>
             <span class="font-color">파란우체통</span>과 마음을 전해요 :-) <br>
     
             현재까지 나눈 카드 <span class="font-color">{{card_count | number}}</span>통!
@@ -34,11 +34,11 @@
 <div class="card-list">
     <div class="padding">
         <div style="display: inline-flex; width: 100%;">
-            <span class="card-title">인기있는 카드 💌</span>
+            <span class="card-title">신년 카드 💌</span>
             <span class="card-arrow" (click)="link_to_card()"><br>더보기 > &nbsp;&nbsp;</span>
         </div>
         <div class="card-item">
-            <div class="item" *ngFor="let item of card_list_pop" (click)="link_to_card_view(item.card_idx)" [style.backgroundImage]="'url('+ item.card_img_url +')'">
+            <div class="item" *ngFor="let item of card_list_christmas" (click)="link_to_card_view(item.card_idx)" [style.backgroundImage]="'url('+ item.card_img_url +')'">
                 <!-- <img [src]="item.card_img_url" style="width: 12vw; height: 8vw;"> -->
                 <!-- <div [style.back]></div> -->
             </div>
@@ -53,11 +53,11 @@
 <div class="card-list">
     <div class="padding">
         <div style="display: inline-flex; width: 100%;">
-            <span class="card-title">크리스마스 카드 🎄</span>
+            <span class="card-title">인기있는 카드 💌</span>
             <span class="card-arrow" (click)="link_to_card()"><br>더보기 > &nbsp;&nbsp;</span>
         </div>
         <div class="card-item">
-            <div class="item" *ngFor="let item of card_list_christmas" (click)="link_to_card_view(item.card_idx)" [style.backgroundImage]="'url('+ item.card_img_url +')'">
+            <div class="item" *ngFor="let item of card_list_pop " (click)="link_to_card_view(item.card_idx)" [style.backgroundImage]="'url('+ item.card_img_url +')'">
             </div>
             &nbsp;
         </div>
